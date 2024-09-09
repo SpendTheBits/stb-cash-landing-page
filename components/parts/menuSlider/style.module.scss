@@ -1,0 +1,35 @@
+.menuSliderContainer {
+  position: absolute;
+  // width: 100% !important;
+  height: 100vh;
+  background-color: var(--primaryColor);
+  top: 0;
+  right: 0;
+  z-index: 99;
+  box-shadow: -5px 0px 5px 0px rgba(0, 0, 0, 0.1);
+  border-left: 2px solid #3b3939;
+  // max-width: 300px;
+  ul {
+    margin-top: 120px !important;
+    list-style: none;
+    padding: 0;
+    li {
+      font-size: 18px;
+      font-weight: 500;
+      a {
+        display: block;
+        padding: 25px 40px;
+        border-bottom: 2px solid var(--accentColor);
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        &:after {
+          display: none !important;
+        }
+      }
+      button {
+        max-width: 70%;
+      }
+    }
+  }
+}

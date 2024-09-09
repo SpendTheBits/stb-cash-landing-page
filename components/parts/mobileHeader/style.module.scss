@@ -1,0 +1,31 @@
+@import "/styles/mixins";
+
+.mobileHeader {
+  display: none;
+  height: 100px;
+  z-index: 99999999;
+  position: relative;
+  padding-inline: 20px;
+  background-color: var(--primaryColor);
+  > div {
+    &:nth-of-type(1) {
+      flex: 0 0 200px;
+    }
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .mobileHeader {
+    display: block;
+    @include flexContainer($justifyContent: space-between);
+    > div {
+      &:nth-of-type(1) {
+        flex: 0 0 100px;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

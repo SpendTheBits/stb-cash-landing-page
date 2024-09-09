@@ -1,0 +1,189 @@
+@import "/styles/mixins";
+
+.landingPage {
+  background-color: var(--primaryColor);
+  .aboutSection {
+    padding-top: 50px;
+    > div {
+      @include flexContainer($gap: 75px);
+      flex-direction: column;
+      > div {
+        width: 100%;
+        // > div {
+        //   p {
+        //     margin-top: 50px;
+        //   }
+        // }
+        &:nth-of-type(1) {
+          border-bottom: 1px solid var(--accentColor);
+          > div {
+            text-align: left;
+            padding-bottom: 75px;
+            img {
+              max-width: 250px;
+              margin: 0 auto 50px;
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+  .featuresSection {
+    padding-block: 100px;
+    > div {
+      @include flexContainer($gap: 75px);
+      flex-direction: column;
+      > div {
+        width: 100%;
+        > div {
+          p {
+            margin-top: 50px;
+          }
+          a {
+            margin-top: 50px;
+            max-width: 30%;
+          }
+        }
+        &:nth-of-type(1) {
+          border-bottom: 1px solid var(--accentColor);
+          > div {
+            text-align: left;
+            padding-bottom: 75px;
+          }
+        }
+        &:nth-of-type(even) {
+          align-items: center;
+          > div {
+            &:nth-of-type(2) {
+              text-align: center;
+            }
+          }
+        }
+        &:nth-of-type(3) {
+          align-items: center;
+        }
+      }
+    }
+  }
+  .signUpSection {
+    padding-bottom: 100px;
+    > div {
+      @include flexContainer($gap: 75px);
+      flex-direction: column;
+      > div {
+        width: 100%;
+        &:nth-of-type(1) {
+          border-bottom: 1px solid var(--accentColor);
+          > div {
+            text-align: left;
+            padding-bottom: 75px;
+          }
+        }
+        &:nth-of-type(2) {
+          > div {
+            &:nth-of-type(4) {
+              align-self: flex-end;
+              button {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .joinusSection {
+    padding-bottom: 100px;
+  }
+  .downloadAppSection {
+    padding-bottom: 100px;
+    > div {
+      > div {
+        > div {
+          h2 {
+            font-size: 60px;
+          }
+          &:nth-of-type(2) {
+            @include flexContainer;
+            img {
+              width: 100%;
+              max-width: 220px;
+              height: 75px;
+              &:nth-of-type(2) {
+                border: 1px solid #a9a7a7;
+                border-radius: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 990px) {
+  .landingPage {
+    .signUpSection {
+      > div {
+        > div {
+          justify-content: center;
+          row-gap: 30px;
+        }
+      }
+    }
+    .downloadAppSection {
+      > div {
+        > div {
+          row-gap: 30px;
+          > div {
+            h2 {
+              font-size: 47px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .landingPage {
+    .featuresSection {
+      > div {
+        > div {
+          row-gap: 30px;
+          &:nth-of-type(even) {
+            flex-direction: column-reverse;
+          }
+        }
+      }
+    }
+    .signUpSection {
+      > div {
+        > div {
+          row-gap: 40px;
+        }
+      }
+    }
+    .downloadAppSection {
+      > div {
+        > div {
+          row-gap: 30px;
+          > div {
+            h2 {
+              font-size: 45px;
+            }
+            &:nth-of-type(2) {
+              @include flexContainer;
+              img {
+                max-width: 165px;
+                height: 56px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

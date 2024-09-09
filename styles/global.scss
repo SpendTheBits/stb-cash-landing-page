@@ -1,0 +1,62 @@
+@import "./mixins";
+@import "@fontsource-variable/inter";
+
+:root {
+  --primaryColor: #0e0e0e;
+  --secondaryColor: #fff;
+  --textColor: #9b9b9b;
+  --accentColor: #00f6ff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter Variable", sans-serif;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "Inter Variable", sans-serif;
+  .pageContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    > main {
+      flex: 1 1 auto;
+    }
+  }
+}
+
+.primaryBtn {
+  display: inline-block;
+  width: auto;
+  border-radius: 14px;
+  background-color: var(--accentColor);
+  @include flexContainer;
+  color: #282828;
+  height: 60px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.disabledBtn {
+  pointer-events: none;
+  background-color: #a5a7aa;
+  display: inline-block;
+  width: auto;
+  border-radius: 14px;
+  @include flexContainer;
+  color: #282828;
+  height: 60px;
+  font-weight: 500;
+  font-size: 18px;
+}

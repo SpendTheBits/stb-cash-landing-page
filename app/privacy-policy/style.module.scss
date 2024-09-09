@@ -1,0 +1,27 @@
+.privacyPolicy {
+  background-color: var(--primaryColor);
+  padding-block: 100px;
+  > div {
+    > div {
+      > div {
+        h2 {
+          text-align: center;
+        }
+        h4 {
+          color: #fff;
+          margin-block: 30px;
+        }
+        p {
+          font-size: 18px;
+        }
+        ul {
+          li {
+            color: var(--textColor);
+            font-size: 18px;
+            margin-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+@import "/styles/mixins";
+
+.signupFormBlock {
+  form {
+    @include flexContainer;
+    > div {
+      width: 100%;
+      position: relative;
+      button {
+        width: 100%;
+      }
+      &:nth-of-type(4) {
+        align-self: flex-end;
+      }
+      .errorText {
+        position: absolute;
+        bottom: -30px;
+        width: 100%;
+        left: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .signupFormBlock {
+    form {
+      flex-direction: column;
+    }
+  }
+}

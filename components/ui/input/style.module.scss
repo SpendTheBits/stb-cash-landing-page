@@ -1,0 +1,44 @@
+@import "/styles/mixins";
+
+.inputContainer {
+  @include flexContainer($gap: 10px);
+  flex-direction: column;
+  label,
+  input {
+    width: 100%;
+  }
+  label {
+    color: var(--secondaryColor);
+  }
+  .inputBlock {
+    position: relative;
+    width: 100%;
+    input {
+      border-radius: 14px;
+      height: 60px;
+      padding: 20px 20px 20px 50px;
+      color: #9b9b9b;
+      border: 1px solid transparent;
+      background: linear-gradient(
+        90deg,
+        rgba(54, 54, 54, 1) 55%,
+        rgba(54, 54, 54, 0.6) 90%
+      );
+      &:focus {
+        outline: none;
+        border-color: var(--secondaryColor);
+        background: transparent;
+        & ~ svg {
+          color: var(--secondaryColor);
+        }
+      }
+    }
+    svg {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #9b9b9b;
+    }
+  }
+}
